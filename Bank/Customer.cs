@@ -6,13 +6,9 @@ using System.Threading.Tasks;
 
 namespace Bank
 {
-    public interface AddAccount
+    public class Customer
     {
-        void AddAccount();
-    }
-
-    public interface BankProcessTransaction
-    {
-        void ProcessTransaction();
+        public int CustomerId { get; set; }
+        public string Name { get; set; }
     }
 }

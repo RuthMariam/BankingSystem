@@ -4,21 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Bank;
-using BankProcessingLibrary;
 
 namespace Bank
 {
-    public class TransactionManager
+    public class DetailManager
     {
-        private readonly IBankProcess bp;
+        private readonly IGetDetails gd;
 
-        public TransactionManager(IBankProcess? bp) {
-            this.bp = bp;
+        public DetailManager(IGetDetails gd)
+        {
+            this.gd = gd;
         }
 
         public Account MakeTransaction()
         {
-            return bp.Process();
+            return gd.GetDetail();
 
         }
     }
