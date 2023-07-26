@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Bank
 {
-    public class AddAccountUI
+    public class AddAccountUI : IUserInterface
     {
-        public static void addUser()
+        public void Function()
         {
             Console.Clear();
             try

@@ -7,10 +7,10 @@ using System.Transactions;
 
 namespace Bank
 {
-    public class TransactionUI
+    public class TransactionUI : IUserInterface
     {
 
-        public static void ProcessTranscation()
+        public void Function()
         {
             
             Console.Clear();
