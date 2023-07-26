@@ -36,11 +36,12 @@ namespace Bank
                     default:
                         Console.WriteLine("Input was not in the option \n Press Enter to Continue");
                         break;
-                }  
+                }
 
                 Console.ReadLine();
-
                 Console.Clear();
+
+                // this a comment
             }
 
         }
