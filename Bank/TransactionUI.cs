@@ -63,8 +63,8 @@ namespace Bank
                         break;
                 }
 
-                TransactionManager tm = new TransactionManager(service);
-                Account UpdatedAccount=tm.MakeTransaction();
+                TransactionManager tm = new TransactionManager();
+                Account UpdatedAccount = tm.Process(service);
                 Console.WriteLine($"New Balance : {UpdatedAccount.Balance}  \n Please Enter to continue");
                 Console.ReadLine();
 

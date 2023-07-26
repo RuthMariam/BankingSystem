@@ -16,8 +16,8 @@ namespace Bank
             {
                 long accountNumber = DataProcessor.ValidateLong(Console.ReadLine());
                 var IDetails = GetDetailsFactory.CreateTransaction(detailMode.console, accountNumber);
-                DetailManager dm = new DetailManager(IDetails);
-                Account account = dm.MakeTransaction();
+                TransactionManager dm = new TransactionManager();
+                Account account = dm.Process(IDetails);
                 if (account == null)
                 {
                     return;
