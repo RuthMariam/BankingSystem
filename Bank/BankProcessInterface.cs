@@ -15,6 +15,4 @@ namespace Bank
         public int AddAccount();
     }
 
-
-    //this comment is put here to test the git branch function
 }
