@@ -36,9 +36,9 @@ namespace Bank
                         break;
                 }
 
-                AccountMananger am = new AccountMananger(service);
+                TransactionManager am = new TransactionManager();
 
-                int flag = am.AccountCreation();
+                int flag = am.Process(service);
                 Console.WriteLine($"{flag} account created successfully.");
                 Console.ReadLine();
 
