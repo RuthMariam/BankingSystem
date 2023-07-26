@@ -14,5 +14,8 @@ namespace Bank
     {
         public int AddAccount();
     }
-
+    public interface IUserInterface
+    {
+        public void Function();
+    }
 }

@@ -17,32 +17,53 @@ namespace Bank
             Menu mainMenu = new Menu() { MenuListItems = { "ADD ACCOUNT", "PERFROM TRANSACTION", 
                     "DISPLAY USER DETAILS","Exit" }, menuTitle = "ADMIN PAGE" };
             
-            while (true) 
+
+            Dictionary <int, IUserInterface> dictionary = new Dictionary<int, IUserInterface>();
+            dictionary.Add(1, new AddAccountUI());
+            dictionary.Add(2, new TransactionUI());
+            dictionary.Add(3, new AccountDetailsUI());
+                        
+            while(true)
             {
                 mainMenu.MenuDisplay();
                 int choice = DataProcessor.ValidateInteger(Console.ReadLine());
 
-                switch (choice)
-                {
-                    case 1: AddAccountUI.addUser();
-                            break;
-                    case 2: TransactionUI.ProcessTranscation();
-                            break;
-                    case 3: AccountDetailsUI.ProcessTransaction();
-                            break;
-                    case 4:
-                           Environment.Exit(0);
-                        break;
-                    default:
-                        Console.WriteLine("Input was not in the option \n Press Enter to Continue");
-                        break;
+                if(choice == 4) 
+                { 
+                    Environment.Exit(0);
                 }
+                dictionary[choice].Function();
 
                 Console.ReadLine();
                 Console.Clear();
 
-                // this a comment
             }
+
+            //while (true) 
+            //{
+            //    mainMenu.MenuDisplay();
+            //    int choice = DataProcessor.ValidateInteger(Console.ReadLine());
+
+
+
+            //    switch (choice)
+            //    {
+            //        case 1: AddAccountUI.addUser();
+            //                break;
+            //        case 2: TransactionUI.ProcessTranscation();
+            //                break;
+            //        case 3: AccountDetailsUI.ProcessTransaction();
+            //                break;
+            //        case 4:
+            //               Environment.Exit(0);
+            //            break;
+            //        default:
+            //            Console.WriteLine("Input was not in the option \n Press Enter to Continue");
+            //            break;
+            //    }
+
+
+            // this a comment
 
         }
     }

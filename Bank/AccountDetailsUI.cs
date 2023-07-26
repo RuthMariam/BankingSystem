@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Bank
 {
-    public class AccountDetailsUI
+    public class AccountDetailsUI : IUserInterface
     {
-        public static void ProcessTransaction()
+        public void Function()
         {
             Console.Clear();
             Console.Write("Enter your Account Number:");
