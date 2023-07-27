@@ -10,7 +10,7 @@ namespace Bank
     public class TransactionUI : IUserInterface
     {
 
-        public void Function()
+        public void DisplayAndInvoke()
         {
             
             Console.Clear();
@@ -39,7 +39,7 @@ namespace Bank
                 
 
                 int choice = DataProcessor.ValidateInteger(Console.ReadLine());
-                IBankProcess? service = null;
+                IAccountTransactionService? service = null;
 
                 Console.Write("Enter the amount : ");
                 double amount = DataProcessor.ValidateDouble(Console.ReadLine());

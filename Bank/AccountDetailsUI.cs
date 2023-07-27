@@ -8,7 +8,7 @@ namespace Bank
 {
     public class AccountDetailsUI : IUserInterface
     {
-        public void Function()
+        public void DisplayAndInvoke()
         {
             Console.Clear();
             Console.Write("Enter your Account Number:");

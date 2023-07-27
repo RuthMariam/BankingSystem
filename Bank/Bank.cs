@@ -32,7 +32,7 @@ namespace Bank
                 { 
                     Environment.Exit(0);
                 }
-                dictionary[choice].Function();
+                dictionary[choice].DisplayAndInvoke();
 
                 Console.ReadLine();
                 Console.Clear();

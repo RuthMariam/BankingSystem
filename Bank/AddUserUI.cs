@@ -8,7 +8,7 @@ namespace Bank
 {
     public class AddAccountUI : IUserInterface
     {
-        public void Function()
+        public void DisplayAndInvoke()
         {
             Console.Clear();
             try
@@ -22,7 +22,7 @@ namespace Bank
                 mainMenu.MenuDisplay();
 
                 int choice = DataProcessor.ValidateInteger(Console.ReadLine());
-                IAddAccount? service = null;
+                IAccountSetupService? service = null;
 
 
                 switch (choice)

@@ -14,7 +14,7 @@ namespace Bank
     }
     public class AccountFactory
     {
-        public static IAddAccount CreateAccount(CreationMode mode)
+        public static IAccountSetupService CreateAccount(CreationMode mode)
         {
             if (mode == CreationMode.Console)
             {
@@ -29,13 +29,13 @@ namespace Bank
 
                 Console.Write("Enter Currency (USD,INR) : ");
                 string currency = Console.ReadLine();
-                return new ReadfromConsole(acc, name, balance, currency);
+                return new ConsoleAccountSetupService(acc, name, balance, currency);
             }
             else if (mode == CreationMode.File)
             {
                 Console.Write("Enter File name : ");
                 string name = Console.ReadLine();
-                return new ReadfromFile(name);
+                return new FileAccountSetupService(name);
             }
             else
                 return null;

@@ -8,9 +8,9 @@ namespace Bank
 {
     public class AccountMananger
     {
-        private readonly IAddAccount ad;
+        private readonly IAccountSetupService ad;
 
-        public AccountMananger(IAddAccount ad)
+        public AccountMananger(IAccountSetupService ad)
         {
             this.ad = ad;
         }

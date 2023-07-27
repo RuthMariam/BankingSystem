@@ -7,7 +7,7 @@ using ClassLibrary1;
 
 namespace Bank
 {
-    public class ReadfromFile : IAddAccount
+    public class FileAccountSetupService : IAccountSetupService
     {
         //public ReadfromFile() { }
         //public bool AddAccount()
@@ -18,7 +18,7 @@ namespace Bank
         //}
 
         public string filename;
-        public ReadfromFile(string path)
+        public FileAccountSetupService(string path)
         {
             filename = path;
         }

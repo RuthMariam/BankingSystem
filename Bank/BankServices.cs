@@ -27,15 +27,15 @@ namespace Bank
         //}
 
 
-        public Account Process(IBankProcess bp)
+        public Account Process(IAccountTransactionService bp)
         {
             return bp.Process();
         }
-        public Account Process(IGetDetails gd)
+        public Account Process(IAccountService gd)
         {
             return gd.GetDetail();
         }
-        public int Process(IAddAccount ac)
+        public int Process(IAccountSetupService ac)
         {
             return ac.AddAccount();
         }

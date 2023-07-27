@@ -8,7 +8,7 @@ using ClassLibrary1;
 
 namespace Bank
 {
-    public class GetDetailsConsole : IGetDetails
+    public class GetDetailsConsole : IAccountService
     {
         long accNo;
         private readonly IDataBase db;

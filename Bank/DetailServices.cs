@@ -9,9 +9,9 @@ namespace Bank
 {
     public class DetailManager
     {
-        private readonly IGetDetails gd;
+        private readonly IAccountService gd;
 
-        public DetailManager(IGetDetails gd)
+        public DetailManager(IAccountService gd)
         {
             this.gd = gd;
         }

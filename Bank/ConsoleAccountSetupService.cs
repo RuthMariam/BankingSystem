@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 //using BankProcessingLibrary;
 namespace Bank
 {
-    public class ReadfromConsole : IAddAccount
+    public class ConsoleAccountSetupService : IAccountSetupService
     {
         //private readonly BankProcessing bp;
         //public ReadfromConsole()
@@ -21,7 +21,7 @@ namespace Bank
         //    return true;
         //}
         Account account;
-        public ReadfromConsole(long acc, string customerName, double bal, string curr)
+        public ConsoleAccountSetupService(long acc, string customerName, double bal, string curr)
         {
             account = new Account(customerName);
             account.AccountNumber = acc;

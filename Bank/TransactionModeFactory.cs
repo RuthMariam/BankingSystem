@@ -19,7 +19,7 @@ namespace Bank
     {
 
         
-        public static IBankProcess? CreateTransaction(Mode mode,long accountNumber, double amount)
+        public static IAccountTransactionService? CreateTransaction(Mode mode,long accountNumber, double amount)
         {
             if (mode == Mode.credit)
             {
@@ -33,7 +33,7 @@ namespace Bank
                 return null;
         }
 
-        public static IBankProcess? CreateTranscation(Mode mode,long fromAccountNumber, long toAccountNumber,double amount)
+        public static IAccountTransactionService? CreateTranscation(Mode mode,long fromAccountNumber, long toAccountNumber,double amount)
         {
             if(mode== Mode.transfer)
             {

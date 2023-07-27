@@ -13,7 +13,7 @@ namespace Bank
     }
     public class GetDetailsFactory
     {
-        public static IGetDetails? CreateTransaction(detailMode mode, long accountNumber)
+        public static IAccountService? CreateTransaction(detailMode mode, long accountNumber)
         {
             if (mode == detailMode.console)
             {

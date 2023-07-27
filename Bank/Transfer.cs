@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Bank
 {
-    public class Transfer : IBankProcess
+    public class Transfer : IAccountTransactionService
     {
         long fromAccNo, toAccNo;
         double amt;

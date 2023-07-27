@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using ClassLibrary1;
 namespace Bank
 {
-    public class Withdraw : IBankProcess
+    public class Withdraw : IAccountTransactionService
     {
         long accNo;
         double amt;
